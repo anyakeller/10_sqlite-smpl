@@ -16,7 +16,7 @@ c = db.cursor()    #facilitate db ops
 
 
 q = "CREATE TABLE students (name TEXT, age INTEGER, id INTEGER);"
-#c.execute(q)    #run SQL query
+c.execute(q)    #run SQL query
 fObj = open("peeps.csv") 
 d=csv.DictReader(fObj)
 for k in d:
@@ -29,6 +29,7 @@ print c.fetchall()  #prints all the recent execute printouts
 
 #create courses 
 q = "CREATE TABLE courses (code TEXT, id INTEGER, mark INTEGER)"
+c.execute(q)    #run SQL query
 fObj = open("courses.csv") 
 d=csv.DictReader(fObj)
 for k in d:
